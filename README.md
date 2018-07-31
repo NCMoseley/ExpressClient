@@ -7,7 +7,7 @@ Boilerplate for a React Application to use with ExpressPassport
 yarn add/npm i --save:
 
 ```
-react-router-dom redux react-redux redux-form axios redux-thunk
+react-router-dom redux react-redux redux-form axios redux-thunk nodemon
 ```
 
 ## References
