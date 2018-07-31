@@ -1,11 +1,15 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
-import registerServiceWorker from './registerServiceWorker';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+import App from './components/App';
+import Welcome from './components/Welcome';
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('root') as HTMLElement
+  <BrowserRouter>
+    <App>
+      <Route path="/" exact={true} component={Welcome} />
+    </App>
+  </BrowserRouter>,
+  document.querySelector('#root')
 );
-registerServiceWorker();
