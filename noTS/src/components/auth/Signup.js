@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
+import { Link } from 'react-router-dom';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
@@ -15,9 +16,7 @@ class Signup extends Component {
     const { handleSubmit } = this.props;
 
     return (
-      <form onSubmit={handleSubmit(this.onSubmit)}>
-        <input style={{ display: 'none' }} />
-        <input type="password" style={{ display: 'none' }} />
+      <form className="input" onSubmit={handleSubmit(this.onSubmit)}>
         <fieldset>
           <label>Email</label>
           <Field
@@ -38,6 +37,10 @@ class Signup extends Component {
         </fieldset>
         <div>{this.props.errorMessage}</div>
         <button>Sign Up!</button>
+        <div className="center link">
+          Have an account?
+          <Link to="/signin">Sign In</Link>
+        </div>
       </form>
     );
   }

@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.link a {
+  margin: 10px;
+  text-decoration: none !important;
+}
+
+.center {
+  text-align: center;
+}
+
+.input {
+  padding: 20%;
+}

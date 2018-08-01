@@ -12,6 +12,7 @@ import Signup from './components/auth/Signup';
 import Feature from './components/Feature';
 import Welcome from './components/Welcome';
 import reducers from './reducers';
+import './style.css';
 
 const store = createStore(
   reducers,

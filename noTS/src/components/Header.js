@@ -4,26 +4,34 @@ import { connect } from 'react-redux';
 
 class Header extends Component {
   renderLinks() {
+    const slug = window.location.pathname.substring(1).toString();
     if (this.props.authenticated) {
       return (
-        <div>
+        <div className="header link">
           <Link to="/signout">Sign Out</Link>
           <Link to="/feature">Feature</Link>
         </div>
       );
     } else {
       return (
-        <div>
-          <Link to="/signup">Sign Up</Link>
-          <Link to="/signin">Sign In</Link>
+        <div className="header link">
+          {slug === 'signup' ? (
+            <Link onClick={this.renderLinks} to="/signin">
+              Existing users Sign In
+            </Link>
+          ) : (
+            <Link onClick={this.renderLinks} to="/signup">
+              Create a new account
+            </Link>
+          )}
         </div>
       );
     }
   }
   render() {
     return (
-      <div>
-        <Link to="/">Redux Auth</Link>
+      <div className="header link">
+        <Link to="/">Client with Auth</Link>
         {this.renderLinks()}
       </div>
     );
