@@ -2,6 +2,8 @@
 
 Boilerplate for a React Application to use with ExpressPassport. This project supports account creation based on email & password combination. Credentials are stored in mongoDB via mongoose. The server creates Jwt tokens, and the client places them in localstorage in the browser to preserve logged in state for each user. There is a boilerplate feature route which is only available to users who have created an account and are logged in.
 
+This boilerplate incorporates redux, redux-thunk and axios for request promise handling.
+
 ## Instructions
 
 See the folder JavaScript Client in this repo for this project without Typescript. There is a small bug with redux-thunk and Typescript that is being worked on. [#169](https://github.com/reduxjs/redux-thunk/issues/169)
