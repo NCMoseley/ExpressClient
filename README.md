@@ -6,6 +6,20 @@ Boilerplate for a React Application to use with ExpressPassport
 
 See the folder JavaScript Client for this project without Typescript. There is a small bug with redux thunk and Typescript that is being worked out.
 
+Either download the repo, or clone it into a local folder then:
+
+```
+yarn add
+```
+
+To start development server.
+
+```
+yarn start
+```
+
+To run with the corresponding back end, see [ExpressPassport](https://github.com/NCMoseley/ExpressPassport).
+
 ## Packages
 
 yarn add/npm i --save:
