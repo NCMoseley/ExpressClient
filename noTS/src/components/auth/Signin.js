@@ -4,9 +4,9 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
-class Signup extends Component {
+class Signin extends Component {
   onSubmit = formProps => {
-    this.props.signup(formProps, () => {
+    this.props.signin(formProps, () => {
       this.props.history.push('/feature');
     });
   };
@@ -16,15 +16,13 @@ class Signup extends Component {
 
     return (
       <form onSubmit={handleSubmit(this.onSubmit)}>
-        <input style={{ display: 'none' }} />
-        <input type="password" style={{ display: 'none' }} />
         <fieldset>
           <label>Email</label>
           <Field
             name="email"
             type="text"
             component="input"
-            autoComplete="new-password"
+            autoComplete="none"
           />
         </fieldset>
         <fieldset>
@@ -33,11 +31,11 @@ class Signup extends Component {
             name="password"
             type="password"
             component="input"
-            autoComplete="new-password"
+            autoComplete="none"
           />
         </fieldset>
         <div>{this.props.errorMessage}</div>
-        <button>Sign Up!</button>
+        <button>Sign In!</button>
       </form>
     );
   }
@@ -52,5 +50,5 @@ export default compose(
     mapStateToProps,
     actions
   ),
-  reduxForm({ form: 'signup' })
-)(Signup);
+  reduxForm({ form: 'signin' })
+)(Signin);
