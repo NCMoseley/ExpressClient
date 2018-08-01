@@ -2,6 +2,10 @@
 
 Boilerplate for a React Application to use with ExpressPassport
 
+## Instructions
+
+See the folder JavaScript Client for this project without Typescript. There is a small bug with redux thunk and Typescript that is being worked out.
+
 ## Packages
 
 yarn add/npm i --save:
